@@ -1,18 +1,13 @@
-* { 
+*{
   box-sizing: border-box;
   font-family: Helvetica, sans-serif;
 }
 
 header {
   height: 95px;
-  background-color: #999;
+  background-color: #444;
   position: relative;
   margin-bottom: 30px;
-}
-
-header img{
-  display: block;
-  position: absolute;
 }
 
 main {
@@ -22,7 +17,7 @@ main {
 
 footer {
   background-color: #444;
-  margin: 
+  height: 150px;
 }
 
 nav {
@@ -31,17 +26,17 @@ nav {
 }
 
 nav > ul {
-  /* From CSS Tricks*/
   position: absolute;
   top: 50%;
   height: 70px;
-  margin-top: -35px;
+  margin-top: -35px
 }
 
 nav > ul > li {
   float: left;
   margin-right: 50px;
   line-height: 60px;
+  color: #999;
 }
 
 nav > ul > li:first-child {
@@ -53,10 +48,11 @@ main > img:first-child {
 }
 
 main > ul > li {
-  float: left
-;}
+  float: left;
+  /* margin-right: 30px; */
+}
 
-main > ul > li:nth-child(2) {
+main > ul > li:nth-child(3n + 2) {
   margin: 0 30px;
 }
 
@@ -65,9 +61,19 @@ main > ul {
   overflow: hidden;
 }
 
-main > article > section {
+main > article {
+  margin-bottom: 30px;
+}
+
+main > article > section{
   width: 50%;
   float: right;
+  padding-left: 30px
+}
+
+section {
+  position: relative;
+  height: 400px;
 }
 
 section > button {
@@ -75,22 +81,32 @@ section > button {
   height: 35px;
   background-color: #111;
   color: #eee;
+  position: absolute;
+  bottom: 0px;
+}
+
+section > button:hover {
+  background-color: #eee;
+  color: #111;
   transition: 50ms;
   transition-timing-function: ease-in;
   transition-delay: 100ms;
   cursor: pointer;
 }
 
-section > button:hover {
-  background-color: #eee;
-  color: #111;
-}
-
-h3 {
+h3 { 
   font-size: 1.3em;
   margin-bottom: 7px;
 }
 
-p {
-  font-size: 1.15em;
+section div{
+  font-size: 1em;
+  overflow: hidden;
+  height: 339px;
 }
+
+p{
+  overflow-y: scroll;
+}
+
+/* Most of this was copied in class with the exception of a few selectors and HTML tags. Some how in updating my repo I deleted my HTML file I had already committed so I recreated that and replaced the code with my own copy and then added anything that was missing. */
